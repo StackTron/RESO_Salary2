@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const total = (item.nb * item.mvNb) + (item.pr * item.mvPr);
             row.innerHTML = `
                 <td>${item.product}</td>
-                <td><input type="number" value="${item.nb}" class="nb-input" data-mvnb="${item.mvNb}" data-mvpr="${item.mvPr}"></td>
-                <td><input type="number" value="${item.pr}" class="pr-input" data-mvnb="${item.mvNb}" data-mvpr="${item.mvPr}"></td>
+                <td><input type="number" value="${item.nb !== 0 ? item.nb : ''}" class="nb-input" data-mvnb="${item.mvNb}" data-mvpr="${item.mvPr}"></td>
+                <td><input type="number" value="${item.pr !== 0 ? item.pr : ''}" class="pr-input" data-mvnb="${item.mvNb}" data-mvpr="${item.mvPr}"></td>
                 <td class="mv-nb">${(item.nb * item.mvNb).toFixed(2)}</td>
                 <td class="mv-pr">${(item.pr * item.mvPr).toFixed(2)}</td>
                 <td class="total">${total.toFixed(2)}</td>
